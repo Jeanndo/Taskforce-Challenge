@@ -14,7 +14,6 @@ const root =({children,initialState={}})=>{
     initialState,
     composeWithDevTools(middleware)
     );
-
     return <Provider store={store}>{children}</Provider>
 }
 

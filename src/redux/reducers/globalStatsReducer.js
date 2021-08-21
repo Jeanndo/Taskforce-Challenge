@@ -1,7 +1,7 @@
 import * as type from "../actionTypes/actionTypes";
 
-const  initialState = {
-  fetCovidData: {
+const initialState = {
+  globalData: {
     message: null,
     loading: false,
     error: null,
@@ -9,32 +9,32 @@ const  initialState = {
   },
 };
 
-const covidDataReducer = (state = initialState, action) => {
+const globalDataReducer = (state = initialState, action) => {
   switch (action.type) {
-    case type.GET_CONTINENT_DATA_START:
+    case type.GET_GLOBAL_STATS_START:
       return {
         ...state,
-        fetCovidData: {
+        globalData: {
           message: null,
           loading: true,
           error: null,
           success: false,
         },
       };
-    case type.GET_CONTINENT_DATA_SUCCESS:
+    case type.GET_GLOBAL_STATS_SUCCESS:
       return {
         ...state,
-        fetCovidData: {
+        globalData: {
           message: action.payload,
           loading: false,
           error: null,
           success: true,
         },
       };
-    case type.GET_CONTINENT_DATA_FAILURE:
+    case type.GET_GLOBAL_STATS_FAILURE:
       return {
         ...state,
-        fetCovidData: {
+        globalData: {
           message: null,
           loading: false,
           error: action.payload,
@@ -46,4 +46,4 @@ const covidDataReducer = (state = initialState, action) => {
   }
 };
 
-export default covidDataReducer;
+export default globalDataReducer;

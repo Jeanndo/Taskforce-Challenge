@@ -1,9 +1,10 @@
+import { BrowserRouter } from "react-router-dom";
 import Routes from './routes';
 const App = ()=> {
   return (
-    <Routes>
-     TASK FORCE
-    </Routes>
+    <BrowserRouter>
+    <Routes/>
+    </BrowserRouter>
   );
 }
 

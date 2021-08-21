@@ -1,27 +1,35 @@
 import React from "react";
 import { Row, Col } from "antd";
 import Form from "./Form/Form";
+import COVIVALICLOG from "../../Assets/covicalic.png";
+import { connect } from "react-redux";
+import { globaldataAction } from "../../redux/actions/globalCovidData";
 
-const style={backgroundColor:'blue'};
+const Header = ({ globaldataAction, globalData, countryData }) => {
+  React.useEffect(() => {
+    const fetchGlobalData = async () => {
+      await globaldataAction();
+    };
+    fetchGlobalData();
+  }, [globaldataAction]);
 
-const Header = () => {
   return (
     <div className="header">
-      <Row gutter={0}>
-        <Col className="gutter-row" span={12}>
-          <div className="app-name">COVICALC</div>
-        </Col>
-        <Col className="gutter-row" span={12}>
-          <div className="contact">
-           <h5 className="contact-heading"> CONTACT</h5>
+      <div className="nav-bar">
+        <Row gutter={0}>
+          <Col className="gutter-row" span={12}>
+            <div className="app-name">
+              <img src={COVIVALICLOG} alt="logo" />
             </div>
-        </Col>
-      </Row>
+          </Col>
+          <Col className="gutter-row" span={12}>
+            <div className="contact">CONTACT</div>
+          </Col>
+        </Row>
+      </div>
       <Row>
         <Col className="gutter-row" span={24}>
-          <div>
-            <h1 className="updates-heading">UPDATES</h1>
-          </div>
+          <div className="updates">UPDATES</div>
         </Col>
       </Row>
       <Row>
@@ -42,11 +50,20 @@ const Header = () => {
           {""}
         </Col>
       </Row>
-        <div className="cumulatively">
-        <div style={style}>2,188,881</div>
+      <div className="cumulatively">
+        <div className="cumulativeData">
+          {countryData
+            ? countryData.message?.updated
+            : globalData?.message?.updated}
         </div>
+        <div className="cumulative-heading">Cumulatively</div>
+      </div>
     </div>
   );
 };
-
-export default Header;
+const mapStateToprops = ({ globalDataReducer, countryDataReducer }) => {
+  const { globalData } = globalDataReducer;
+  const { countryData } = countryDataReducer;
+  return { globalData, countryData };
+};
+export default connect(mapStateToprops, { globaldataAction })(Header);

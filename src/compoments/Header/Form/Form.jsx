@@ -1,58 +1,70 @@
-import React,{ useState } from 'react';
-import { Row, Col} from 'antd';
-import ReactFlagsSelect from 'react-flags-select';
+import React, { useState, useEffect } from "react";
+import { Row, Col } from "antd";
+import ReactFlagsSelect from "react-flags-select";
+import { connect } from "react-redux";
+import { countryDataAction } from "../../../redux/actions/countryData";
+import { countries } from "country-data";
 
-const Form = () => {
+const Form = ({ countryDataAction }) => {
+  const [selected, setSelected] = useState("");
+  const [country, setCountry] = useState("");
+  const [date, setDate] = useState({ selectedDate: "" });
 
-    const [selected, setSelected] = useState('');
+  useEffect(() => {
+    const searchDatabyCountry = async () => {
+      await countryDataAction(country);
+    };
+    searchDatabyCountry();
+  }, [countryDataAction, country]);
 
-    return (
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setCountry(countries[`${selected}`].name);
+  };
+
+  // console.log(country);
+  //  console.log(date?.selectedDate?.split("-"))
+
+  //  const year =date?.selectedDate?.split("-")[0];
+  //  const month=date?.selectedDate?.split("-")[1];
+  //  const day=date?.selectedDate?.split("-")[2];
+  //  const monthSbstr=month?.split('')[1];
+  //  const yearSubstr =year?.split('0')[1];
+
+  //  console.log(monthSbstr+"/"+day+"/"+yearSubstr);
+
+  return (
     <>
-    {/* <form noValidate autoComplete="off">
-        <div className="form-elements-outer-container container">
-            <div className="form-elements-inner-container">
-            <div className="country-selection">
-            <ReactFlagsSelect
-            className="countries"
-            selected={selected}
-            onSelect={code => setSelected(code)}
-            />
+      <form noValidate autoComplete="off" onSubmit={handleSubmit}>
+        <Row>
+          <Col className="gutter-row" span={24}>
+            <div className="inner-form-container">
+              <ReactFlagsSelect
+                className="countries"
+                searchable
+                selected={selected}
+                onSelect={(code) => setSelected(code)}
+              />
+              <input
+                type="Date"
+                className="calendary"
+                value={date.selectedDate}
+                onChange={(event) =>
+                  setDate({ ...date, selectedDate: event.target.value })
+                }
+              />
+              <button variant="contained" type="submit" className="submit-btn">
+                SUBMIT
+              </button>
             </div>
-            <div className="calendar">
-            <input type="Date" className="calendary"/>
-            <button variant="contained" type="submit" className="submit-btn">Submit</button>
-            </div>
-            <Grid container spacing={0}>
-            <Grid item xs={12} sm={6}>
-            <h1 className="app-name">COVICALC</h1>
-            </Grid>
-            <Grid item xs={12} sm={6}>
-            <h1 className="contact">CONTACT</h1>
-            </Grid>
-            </Grid>
-            </div>
-        </div>
-      </form> */
-      }
-    <form noValidate autoComplete="off">
-      <Row gutter={0}>
-      <Col className="gutter-row" span={12}>
-      <ReactFlagsSelect
-            className="countries"
-            searchable
-            selected={selected}
-            onSelect={code => setSelected(code)}
-            />
-      </Col>
-      <Col className="gutter-row" span={12}>
-      <input type="Date" className="calendary"/>
-      <button variant="contained" type="submit" className="submit-btn">Submit</button>
-      </Col>
-     
-    </Row>
-    </form>
-      </>
-    )
-}
-
-export default Form
+          </Col>
+        </Row>
+      </form>
+    </>
+  );
+};
+const mapStateToprops = ({ countryDataReducer }) => {
+  const { countryData } = countryDataReducer;
+  return { countryData };
+};
+export default connect(mapStateToprops, { countryDataAction })(Form);

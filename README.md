@@ -4,7 +4,7 @@
 # Project Set up
 # Installing Node modules 
   # After Cloning The project to your machine open terminal
-  # type 
+  # type cd task-force-challenge-frontend
    npm i or yarn add
 
 # Client side :

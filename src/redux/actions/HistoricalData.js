@@ -28,16 +28,21 @@ const REQUEST_START = () => ({ type: GET_COUNTRY_HIST__DATA_START });
  * @returns {Promise} Promise object represents the data from get https request.
  *
  */
-export const historicalDataByCountry = (country) => async (dispatch) => {
+export const historicalDataByCountry = (country,date) => async (dispatch) => {
   dispatch(REQUEST_START);
 
   axios
     .get(`https://corona.lmao.ninja/v2/historical/${country}?lastdays=30`)
     .then((response) => {
-      const data = response.data;
+      const data = response.data.timeline;
+      console.log(data)
+      const selectedDate = date
       return dispatch({
         type: GET_COUNTRY_HIST__DATA_SUCCESS,
-        payload: data,
+        payload:{
+          data,
+          selectedDate
+        },
       });
     })
     .catch((error) => {

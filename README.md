@@ -51,7 +51,13 @@ For More about how the app works you can visite the by clicking the link down be
 ```
 [Hosted App](https://covicalcbytaskforce.netlify.app/)
 
+### LET SEE OUR APP ON DIFFERENT SIZE DEVICES.
 
+![]()
+![]()
+![]()
+![]()
+![]()
 ### LET'S SEE HOW WE CAN INSTALL THE PROJECT
 
 

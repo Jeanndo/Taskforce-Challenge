@@ -1,511 +1,645 @@
-body{
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-
-.app-container{
-top: 0px;
-left: 0px;
-width: 1920px;
-height: 3520px;
-background: #FFFFFF 0% 0% no-repeat padding-box;
-opacity: 1;
-
+.app-container {
+  top: 0px;
+  left: 0px;
+  width: 1920px;
+  height: 3520px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  opacity: 1;
 }
-.header{
-top: 0px;
-left: 0px;
-height:578px;
-background: #2FC8B8 0% 0% no-repeat padding-box;
-opacity: 1;
+.header {
+  top: 0px;
+  left: 0px;
+  height: 578px;
+  background: #2fc8b8 0% 0% no-repeat padding-box;
+  opacity: 1;
 }
-.nav-bar{
-padding:37px 150px 0px 150px;  
+.nav-bar {
+  padding: 37px 150px 0px 150px;
 }
-.app-name{
-width: 174px;
-height: 51px;
-opacity: 1;
-color:#fff;
-font: normal normal bold 22px/27px Roboto;
-
+.app-name {
+  width: 174px;
+  height: 51px;
+  opacity: 1;
+  color: #fff;
+  font: normal normal bold 22px/27px Roboto;
 }
 
-.contact{
-width: 173px;
-height: 51px;
-padding:14px 45px 14px 45px;
-border-radius: 6px;
-background-color: #1E776E;
-text-align: center;
-font: normal normal bold 18px/22px Roboto;
-letter-spacing: 0px;
-color: #FFFFFF;
-opacity: 1;
-float: right;
+.contact {
+  width: 173px;
+  height: 51px;
+  padding: 14px 45px 14px 45px;
+  border-radius: 6px;
+  background-color: #1e776e;
+  text-align: center;
+  font: normal normal bold 18px/22px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  float: right;
 }
-.contact-heading{
-color:#ffff;
-}
-
-.updates{
-margin-top: 30px;
-text-align:center;
-font: normal normal bold 30px/42px Bebas Neue;
-letter-spacing: 0px;
-color: #FFFFFF;
-opacity: 1;
+.contact-heading {
+  color: #ffff;
 }
 
-.country-search-label{
-height: 22px;
-text-align: center;
-font: normal normal 300 18px/22px Roboto;
-letter-spacing: 0px;
-color: #FFFFFF;
-opacity: 1;
+.updates {
+  margin-top: 30px;
+  text-align: center;
+  font: normal normal bold 30px/42px Bebas Neue;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
 }
-.inner-form-container{
-justify-content:center;
-display: flex;
-padding:3px;
-width:auto;
-height: 50px;
-background: #E6F5F3 0% 0% no-repeat padding-box;
-border-radius: 8px;
-opacity: 1;
+
+.country-search-label {
+  height: 22px;
+  text-align: center;
+  font: normal normal 300 18px/22px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
 }
-.countries{
-    width:288px;
-    margin:0px 0px 0px 0px;
-    height:42px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border-radius:4px;
-    opacity: 1;
-   box-shadow: none;
+.form-validationerror {
+  border: 1px solid red;
 }
-.calendary{
-width:235px;
-border-radius:1px;
-cursor: pointer;
-outline: none;
-border-style: none;
-height:42px;
-background: #FFFFFF 0% 0% no-repeat padding-box;
-opacity: 1;
+.onFormValid {
+  border: 1px solid #ffffff;
 }
-.submit-btn{
-    cursor: pointer;
-    outline: none;
-    border-style: none;
-    top: 305px;
-    left: 1171px;
-    width:107px;
-    height:42px;
-    background: #1E776E 0% 0% no-repeat padding-box;
-    border-radius: 0px 6px 6px 0px;
-    opacity: 1;
-    color: #FFFFFF;
+form {
+  background-color: #ffffff;
+  padding: 3px;
+  border-radius: 3px;
 }
-.cumulatively{
-margin:89px 300px 0px 300px;
-height: 261px;
-padding:47px 200px 99px 200px;
-background: #1E776E 0% 0% no-repeat padding-box;
-border-radius: 8px 8px 0px 0px;
-opacity: 1;
+.inner-form-container {
+  display: flex;
+  border-radius: 3px;
 }
-.cumulativeData{
-text-align: center;
-font: normal normal 300 42px/115px Roboto;
-letter-spacing: 0px;
-color: #2FC8B8;
-opacity: 1;
+.countries {
+  width: 200px;
+  margin: 0px 0px 0px 0px;
+  height: 42px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 4px;
+  opacity: 1;
+  box-shadow: none;
 }
-.cumulative-heading{
-top: 624px;
-left: 896px;
-height: 27px;
-text-align: center;
-font: normal normal bold 22px/27px Roboto;
-letter-spacing: 0px;
-color: #FFFFFF;
-opacity: 1;
+.calendary {
+  width: 200px;
+  border-radius: 1px;
+  cursor: pointer;
+  outline: none;
+  border-style: none;
+  height: 42px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+.submit-btn {
+  cursor: pointer;
+  outline: none;
+  border-style: none;
+  width: 107px;
+  height: 42px;
+  background: #1e776e 0% 0% no-repeat padding-box;
+  border-radius: 0px 6px 6px 0px;
+  opacity: 1;
+  color: #ffffff;
+}
+.cumulatively {
+  margin: 60px 300px 0px 300px;
+  height: 285px;
+  padding: 47px 100px 99px 100px;
+  background: #1e776e 0% 0% no-repeat padding-box;
+  border-radius: 8px 8px 0px 0px;
+  opacity: 1;
+}
+.cumulativeData {
+  text-align: center;
+  font: normal normal 300 42px/115px Roboto;
+  letter-spacing: 0px;
+  color: #2fc8b8;
+  opacity: 1;
+}
+.cumulative-heading {
+  top: 624px;
+  left: 896px;
+  height: 27px;
+  text-align: center;
+  font: normal normal bold 22px/27px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
 }
 /*****APP CONTENTS******/
-.covid-data-display-container{
-background: #FFFFFF 0% 0% no-repeat padding-box;
-opacity: 1;
+.covid-data-display-container {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  opacity: 1;
 }
-.covid-data{
-padding:47px;
-top: 707px;
-margin:0px 300px 0px 300px;
-height: 222px;
-background: #FFFFFF 0% 0% no-repeat padding-box;
-box-shadow: 0px 3px 16px #0000001F;
-border-radius: 0px 0px 8px 8px;
-opacity: 1;
+.covid-data {
+  padding: 47px;
+  top: 707px;
+  margin: 0px 300px 0px 300px;
+  height: 222px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 16px #0000001f;
+  border-radius: 0px 0px 8px 8px;
+  opacity: 1;
 }
-.covid-data-card-container{
-    justify-content: center;
-    display: flex;
+.covid-data-card-container {
+  justify-content: center;
+  display: flex;
 }
-.cov-data-card{
-width: 124px;
-height: 100px;
-margin-left:10px;
-opacity: 1;
+.cov-data-card {
+  width: 124px;
+  height: 100px;
+  margin-left: 10px;
+  opacity: 1;
+}
+.cov-data-box1 {
+  height: 51px;
+  text-align: center;
+  font: normal normal 300 16px/51px Roboto;
+  letter-spacing: 0px;
+  color: #2fc8b8;
+  opacity: 1;
+}
+.cov-data-box2 {
+  margin: 6px 0 3px 0;
+  height: 19px;
+  text-align: center;
+  font: normal normal bold 0px/19px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+.cov-data-box3 {
+  margin: 20px 0 3px 0;
+  height: 19px;
+  text-align: center;
+  font: normal normal 300 10px/19px Roboto;
+  letter-spacing: 0px;
+  color: #888888;
+  opacity: 1;
+}
+.per-continets {
+  margin-top: 132px;
+  height: 57px;
+  text-align: center;
+  font: normal normal bold 30px/42px Bebas Neue;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+.outer-container {
+  margin: 0px 0px 16px 0px;
+  position: relative;
+  overflow: hidden;
+}
+.slide-show-container {
+  display: inline-flex;
+  width: 1920px;
+  height: 403px;
+  transition: transform 0.5s;
+  margin: 87px 0px 165px 0px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 16px #0000001f;
+  border-radius: 8px;
+  opacity: 1;
+}
+.slide-card {
+  display: flex;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-right: 20px;
+  width: 617px !important;
+  height: 403px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 16px #0000001f;
+  border-radius: 8px;
+  opacity: 1;
+}
+.sub-card {
+  width: 309px;
+  height: 403px;
+  background: #2fc8b8 0% 0% no-repeat padding-box;
+  border-radius: 0px 8px 8px 0px;
+  opacity: 1;
+}
+.left-card-contents {
+  padding: 51px 71px 51px 71px;
+  width: 308px;
+}
+.continent {
+  margin-bottom: 68px;
+  text-align: center;
+  font: normal normal bold 20px/42px Bebas Neue;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  text-transform: uppercase;
+}
+.continent-casses {
+  margin-top: 0px 71px 0px 71px;
+  text-align: center;
+  font: normal normal 300 40px/67px Roboto;
+  letter-spacing: 0px;
+  color: #2fc8b8;
+  opacity: 1;
+}
+.continent-cases-labels {
+  text-align: center;
+  font: normal normal bold 16px/19px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+.all-cases {
+  margin-top: 79px;
+  text-align: center;
+  font: normal normal 300 16px/19px Roboto;
+  letter-spacing: 0px;
+  color: #888888;
+  opacity: 1;
+}
+.new-deaths {
+  margin: 30px 135px 25px 135px;
+  text-align: center;
+  font: normal normal 300 24px/29px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+.new-deaths-label {
+  margin: 6px 100px 0px 100px;
+  text-align: center;
+  font: normal normal bold 8px/10px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+.total-deaths {
+  margin: 15px 0px 0px 0px;
+  text-align: center;
+  font: normal normal 300 20px/13px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+  /* opacity: 1; */
+}
+.newly-recovered {
+  margin: 30px 119px 5px 119px;
+  text-align: center;
+  font: normal normal 300 24px/29px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+.newly-recoverd-label {
+  margin: 6px 10px 0px 10px;
+  text-align: center;
+  font: normal normal bold 16px/10px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+.total-recovered {
+  margin: 15px 9px 0px 9px;
+  text-align: center;
+  font: normal normal 300 16px/13px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
 
+.new-vaccinated {
+  margin: 57px 104px 0px 103px;
+  text-align: center;
+  font: normal normal 300 25px/29px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
 }
-.cov-data-box1{
-    height: 51px;
-    text-align: center;
-    font: normal normal 300 16px/51px Roboto;
-    letter-spacing: 0px;
-    color: #2FC8B8;
-    opacity: 1;
-       
+.new-vaccinated-label {
+  margin: 10px 12px 0px 12px;
+  text-align: center;
+  font: normal normal bold 16px/10px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
 }
-.cov-data-box2{
-margin:0 0 3px 0 ;
-height: 19px;
-text-align: center;
-font: normal normal bold 15px/19px Roboto;
-letter-spacing: 0px;
-color: #000000;
-opacity: 1;
-}
-.cov-data-box3{
-    height: 19px;
-    text-align: center;
-    font: normal normal 300 10px/19px Roboto;
-    letter-spacing: 0px;
-    color: #888888;
-    opacity: 1;
-}
-.per-continets{
-    margin-top: 132px;
-    height: 57px;
-    text-align: center;
-    font: normal normal bold 30px/42px Bebas Neue;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
-}
-.outer-container{
-    margin:0px 0px  16px 0px; 
-    position: relative;
-    overflow: hidden;
-}
-.slide-show-container{
-display:inline-flex;
-width:1920px;
-height: 403px;
-transition: transform 0.5s;
-margin:87px 0px  165px 0px;
-background: #FFFFFF 0% 0% no-repeat padding-box;
- box-shadow: 0px 3px 16px #0000001F;
-border-radius: 8px;
-opacity: 1;
-}
-.slide-card{
-    display: flex;
-    overflow: hidden;
-    flex-shrink:0;
-    margin-right:20px;
-    width: 617px !important;
-    height: 403px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 16px #0000001F;
-    border-radius: 8px;
-    opacity: 1;   
-}
-.sub-card{
-    width: 309px;
-    height: 403px;
-    background: #2FC8B8 0% 0% no-repeat padding-box;
-    border-radius: 0px 8px 8px 0px;
-    opacity: 1; 
-}
-.left-card-contents{
-    padding:51px 71px 51px 71px;
-    width: 308px;
-}
-.continent{
-margin-bottom:68px;
-text-align: center;
-font: normal normal bold 20px/42px Bebas Neue;
-letter-spacing: 0px;
-color: #000000;
-opacity: 1;
-text-transform: uppercase;
-}
-.continent-casses{
-    margin-top:0px 71px 0px 71px;
-    text-align: center;
-    font: normal normal 300 40px/67px Roboto;
-    letter-spacing: 0px;
-    color: #2FC8B8;
-    opacity: 1; 
-}
-.continent-cases-labels{
-    text-align: center;
-    font: normal normal bold 16px/19px Roboto;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;   
-}
-.all-cases{
-    margin-top:79px;
-    text-align: center;
-    font: normal normal 300 16px/19px Roboto;
-    letter-spacing: 0px;
-    color: #888888;
-    opacity: 1; 
-}
-.new-deaths{
-    margin:30px 135px 0px 135px;
-    text-align: center;
-    font: normal normal 300 24px/29px Roboto;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    opacity: 1;
-}
-.new-deaths-label{
-margin:6px 134px 0px 134px;
-text-align: center;
-font: normal normal bold 8px/10px Roboto;
-letter-spacing: 0px;
-color: #000000;
-opacity: 1;
-}
-.total-deaths{
-    margin:15px 114px 0px 114px;
-    text-align: center;
-    font: normal normal 300 10px/13px Roboto;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    opacity: 1;  
-}
-.newly-recovered{
-    margin:62px 119px 0px 119px;
-    text-align: center;
-    font: normal normal 300 24px/29px Roboto;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    opacity: 1;   
-}
-.newly-recoverd-label{
-    margin:6px 124px 0px 124px;
-    text-align: center;
-    font: normal normal bold 8px/10px Roboto;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;    
-}
-.total-recovered{
-margin:15px 94px 0px 94px;
-text-align: center;
-font: normal normal 300 10px/13px Roboto;
-letter-spacing: 0px;
-color: #FFFFFF;
-opacity: 1;
-}
-
-.new-vaccinated{
-margin:57px 104px 0px 103px;
-text-align: center;
-font: normal normal 300 24px/29px Roboto;
-letter-spacing: 0px;
-color: #FFFFFF;
-opacity: 1;
-}
-.new-vaccinated-label{
-    margin:6px 126px 0px 127px;
-    text-align: center;
-    font: normal normal bold 8px/10px Roboto;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
-}
-.total-vaccinated{
-    margin:15px 92px 35px 93px;
-    text-align: center;
-    font: normal normal 300 10px/13px Roboto;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    opacity: 1;
+.total-vaccinated {
+  margin: 15px 9px 35px 9px;
+  text-align: center;
+  font: normal normal 300 20px/13px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
 }
 /*****profile styles****/
-.profile-container{
-    height:675px;
-    background: #EEF6F6 0% 0% no-repeat padding-box;
-    opacity: 0.56;
+.profile-container {
+  display: flex;
+  height: 675px;
+  background: #eef6f6 0% 0% no-repeat padding-box;
+  opacity: 0.56;
 }
-.profile-picture{
-display: inline-block;
-top: 1774px;
-left: 0.5px;
-width:50%;
-height:675px;
-border: 1px solid #707070;
-opacity: 1;
+.profile-picture {
+  width: 50%;
+  height: 675px;
+  border: 1px solid #707070;
+  opacity: 1;
 }
-.profile-name-container{
-  display: inline-block;  
+.profile-name-container {
 }
-.profile-name{
-    width: 374px;
-    margin-left: 50%;
-    text-align: left;
-    font: normal normal bold 18px/42px Bebas Neue;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1; 
+.profile-pic {
+  width: 100%;
+  height: 675px;
 }
-.profile-skills{
-top: 2282px;
-margin-left: 50%;
-width: 47px;
-height: 29px;
-text-align: left;
-font: normal normal bold 24px/29px Roboto;
-letter-spacing: 0px;
-color: #000000;
-opacity: 1;
+.profile-name {
+  width: 374px;
+  margin-left: 50%;
+  text-align: left;
+  font: normal normal bold 18px/42px Bebas Neue;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+.profile-skills {
+  margin-left: 50%;
+  width: 47px;
+  height: 29px;
+  text-align: left;
+  font: normal normal bold 24px/29px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
 }
 /****FOOTER*****/
-.footer-container{
-background: #1E776E 0% 0% no-repeat padding-box;
-opacity: 1;
+.footer-container {
+  background: #1e776e 0% 0% no-repeat padding-box;
+  opacity: 1;
 }
-.reach-me{
-padding-top:142px;
-text-align: center;
-font: normal normal bold 20px/42px Bebas Neue;
-letter-spacing: 0px;
-color: #FFFFFF;
-opacity: 1;
-}
-
-.email{
-    margin:50px 0px 0px 0px;
-    text-align: center;
-    font: normal normal bold 16px/19px Roboto;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    opacity: 1;
-      
-}
-.email-placeholder{
-margin: 0px 0px 44px 0px;
-text-align: center;
-font: normal normal 300 24px/29px Roboto;
-letter-spacing: 0px;
-color: #FFFFFF;
-opacity: 1;
-}
-.phone{
-    text-align: center;
-    font: normal normal bold 16px/19px Roboto;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    opacity: 1; 
-}
-.phone-placeholder{
-margin:0px 0px 44px 0px;
-text-align: center;
-font: normal normal 300 24px/29px Roboto;
-letter-spacing: 0px;
-color: #FFFFFF;
-opacity: 1;
-}
-.footer-profile{
-text-align: center;
-font: normal normal bold 16px/19px Roboto;
-letter-spacing: 0px;
-color: #FFFFFF;
-opacity: 1;
-}
-.footer-profile-holder{
-    margin:0px 0px 144px 0px;
-    text-align: center;
-    font: normal normal 300 24px/29px Roboto;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-}
-.footer-dev-design{
-    padding:48px 150px 48px 150px;
-    height: 119px;
-    background: #000000 0% 0% no-repeat padding-box;
-    opacity: 0.23;
-    }
-    .developed-by{
-        height: 22px;
-        text-align: left;
-        font: normal normal 300 18px/22px Roboto;
-        letter-spacing: 0px;
-        color: #FFFFFF;
-    }
-    .desgined-by{
-        text-align: right;
-        letter-spacing: 0px;
-        color: #FFFFFF;
-        opacity: 1;
-    }
-    .developer-name{
-        width: 197px;
-        height: 22px;
-        text-align: left;
-        font: normal normal bold 18px/22px Roboto;
-        letter-spacing: 0px;
-        color: #FFFFFF; 
-    }
-    .designer-name{
-        width: 124px;
-        height: 22px;
-        text-align: right;
-        font: normal normal bold 18px/22px Roboto;
-        letter-spacing: 0px;
-        color: #FFFFFF;
-    }
-  /****SLIDE SHOW********/
-.nav button{
-width: 60px;
-height: 60px;
-background: #1E776E 0% 0% no-repeat padding-box;
-opacity: 1;
-border-radius: 50%;
-border-style: none;
-color: #FFFFFF;
-position: absolute;
-top:40%;
-cursor: pointer;
-}
-.prev{
-left:20px;
+.reach-me {
+  padding-top: 142px;
+  text-align: center;
+  font: normal normal bold 20px/42px Bebas Neue;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
 }
 
-.next{
-right:20px;
+.email {
+  margin: 50px 0px 0px 0px;
+  text-align: center;
+  font: normal normal bold 16px/19px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
 }
-.left-arrow-btn{
-    transform: rotate(-180deg);
+.email-placeholder {
+  margin: 0px 0px 44px 0px;
+  text-align: center;
+  font: normal normal 300 24px/29px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
 }
-.load-next{
- transform: translateY(-1920px);   
+.phone {
+  text-align: center;
+  font: normal normal bold 16px/19px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
 }
-/****Form Validation********/
-.form-validationerror{
-    border:1px solid red;
+.phone-placeholder {
+  margin: 0px 0px 44px 0px;
+  text-align: center;
+  font: normal normal 300 24px/29px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
 }
-.onFormValid{
-    border:1px solid #FFFFFF
-  
+.footer-profile {
+  text-align: center;
+  font: normal normal bold 16px/19px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
 }
-form{
-    background-color: #FFFFFF;
-    border-radius: 8px;
+.footer-profile-holder {
+  margin: 0px 0px 144px 0px;
+  text-align: center;
+  font: normal normal 300 24px/29px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+.footer-dev-design {
+  padding: 48px 150px 48px 150px;
+  height: 119px;
+  background: #000000 0% 0% no-repeat padding-box;
+  opacity: 0.23;
+}
+.developed-by {
+  height: 22px;
+  text-align: left;
+  font: normal normal 300 18px/22px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+.desgined-by {
+  text-align: right;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+.developer-name {
+  width: 197px;
+  height: 22px;
+  text-align: left;
+  font: normal normal bold 18px/22px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+.designer-name {
+  width: 124px;
+  height: 22px;
+  text-align: right;
+  font: normal normal bold 18px/22px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+/****SLIDE SHOW********/
+.nav button {
+  width: 60px;
+  height: 60px;
+  background: #1e776e 0% 0% no-repeat padding-box;
+  opacity: 1;
+  border-radius: 50%;
+  border-style: none;
+  color: #ffffff;
+  position: absolute;
+  top: 40%;
+  cursor: pointer;
+}
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+.left-arrow-btn {
+  transform: rotate(-180deg);
+}
+.load-next {
+  transform: translateY(-1920px);
+}
+
+/**MEDIA QUERIES*****/
+@media (max-width: 1440px) {
+  .continent-cases-labels {
+    font: normal normal bold 30px/19px Roboto;
+  }
+  .continent {
+    font: normal normal bold 25px/42px Bebas Neue;
+  }
+  .all-cases {
+    font: normal normal 300 18px/19px Roboto;
+  }
+  .new-deaths-label {
+    font: normal normal bold 10px/10px Roboto;
+  }
+  .new-deaths {
+    font: normal normal 300 35px/29px Roboto;
+  }
+  .new-deaths-label {
+    font: normal normal bold 18px/10px Roboto;
+  }
+  .total-deaths {
+    font: normal normal 300 20px/13px Roboto;
+  }
+  .cov-data-box1 {
+    font: normal normal 300 25px/51px Roboto;
+  }
+  .cov-data-box2 {
+    font: normal normal bold 18px/19px Roboto;
+  }
+  .cov-data-box3 {
+    font: normal normal bold 18px/19px Roboto;
+  }
+}
+@media (max-width: 1024px) {
+ 
+  form {
+    width:400px;
+   
+  }
+ 
+  .profile-container {
+    display: flex;
+    height: 675px;
+    background: #eef6f6 0% 0% no-repeat padding-box;
+    opacity: 0.56;
+  }
+  .covid-data {
+    margin: 0px 100px 0px 100px;
+  }
+  .cumulatively {
+    margin: 60px 100px 0px 100px;
+ 
+  }
+  .profile-container {
+    height: 450px;
+  }
+  .profile-picture {
+    height: 450px;
+  }
+  .profile-pic {
+    width: 100%;
+    height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    width: 1000px; 
+  }
+  .cumulatively {
+    margin: 60px 50px 0px 50px;
+    height: 277px;
+  }
+  .covid-data {
+    margin: 60px 50px 0px 50px;
+  }
+  .covid-data-display-container {
+   margin-top: -61px;
+    width: 1000px;
+  }
+  .developed-by {
+    font: normal normal 300 18px/22px Roboto;
+  }
+  .developer-name {
+    font: normal normal bold 15px/22px Roboto;
+  }
+
+  .profile-container {
+    width: 1000px;
+  }
+  .footer-container {
+    width: 1000px;
+  }
+  .profile-container {
+    height: 400px;
+  }
+  .profile-picture {
+    height: 400px;
+  }
+  .profile-pic {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+@media (max-width:425px){
+
+  form {
+    margin-left: -100px;
+    width:600px;
+   
+  }
+  .countries {
+    height:50px;
+    width: 250px;
+  }
+  .calendary {
+    width: 270px;
+  }
+  .cumulatively {
+    margin: 60px 20px 0px 20px;
+   
+  }
+  .covid-data {
+    margin: 0px 20px 0px 20px;
+  }
+  .covid-data-card-container{
+    margin: 0px 10px 0px 10px;
+    height: 150px;
+  }
+  .cov-data-box1 {
+    font: normal normal 300 35px/51px Roboto;
+  }
+  .cov-data-box2 {
+    font: normal normal bold 25px/19px Roboto;
+  }
+  .cov-data-box3 {
+    font: normal normal bold 24px/19px Roboto;
+  }
+  .developed-by {
+    font: normal normal 300 19px/22px Roboto;
+  }
+  .desgined-by {
+    font: normal normal 300 19px/22px Roboto;
+  }
+
 }

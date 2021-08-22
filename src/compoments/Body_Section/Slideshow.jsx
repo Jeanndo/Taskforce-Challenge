@@ -1,64 +1,68 @@
-import React,{useRef,useEffect}from 'react';
-import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
-import {connect} from 'react-redux';
-import {getCovidDataAction} from '../../redux/actions/getCovidDataAction';
-import Card from './SlidCard';
+import React, { useRef, useEffect } from "react";
+import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
+import { connect } from "react-redux";
+import { getCovidDataAction } from "../../redux/actions/getCovidDataAction";
+import Card from "./SlidCard";
 
+/**
+ *@function Slideshow 
+ * @param {*} fetCovidData a state that stores of all continents.
+ * @param {*} getCovidDataAction Anction creator that fetches all continents data.
+ * @returns A components that will hold a slideshow of all cards that will display all continents data.
+ */
 
-const Slideshow = ({fetCovidData,getCovidDataAction}) => {
+const Slideshow = ({ fetCovidData, getCovidDataAction }) => {
+  const nxt = useRef(null);
+  const nxtbtn = useRef(null);
 
-const nxt = useRef(null);
-const nxtbtn = useRef(null);
-
-let index = 0;
-  const nextbtn = ()=>{
+  let index = 0;
+  const nextbtn = () => {
     index++;
-    nxt.current.style.transform = `translateX(-${index*1920}px)`
+    nxt.current.style.transform = `translateX(-${index * 1920}px)`;
     // const SlideshowTRanslate = nxt.current.style.transform.match(/-+[0-9]+/);
     // console.log(SlideshowTRanslate)
-  }
+  };
 
-  const prevbtn = ()=>{
+  const prevbtn = () => {
     index--;
-    nxt.current.style.transform = `translateX(-${index*1920}px)`
-  }
+    nxt.current.style.transform = `translateX(-${index * 1920}px)`;
+  };
 
-  useEffect(()=>{
-    const fetchCovid_19_Data = async ()=>{
-
-    await getCovidDataAction();
-
-    }
+  useEffect(() => {
+    const fetchCovid_19_Data = async () => {
+      await getCovidDataAction();
+    };
     fetchCovid_19_Data();
-},[getCovidDataAction]);
+  }, [getCovidDataAction]);
 
   return (
-    <div className="outer-container" >
-    <div className="slide-show-container" ref={nxt} >
-        {fetCovidData?.success&&fetCovidData?.message?.map((continentdata)=>{
-            return(
-            <Card key={continentdata.continent}
-            continentdata={continentdata}
-            />
-            )
-        })}
-     </div>
-     <div className="nav">
-      <button className="prev" onClick={prevbtn}>
-      <ArrowRightAltIcon className="left-arrow-btn"/>
-      </button>
-      <button className="next" onClick={nextbtn} ref={nxtbtn}>
-      <ArrowRightAltIcon/>
-      </button>
+    <div className="outer-container">
+      <div className="slide-show-container" ref={nxt}>
+        {fetCovidData?.success &&
+          fetCovidData?.message?.map((continentdata) => {
+            return (
+              <Card
+                key={continentdata.continent}
+                continentdata={continentdata}
+              />
+            );
+          })}
       </div>
-     </div>
-    
-  )
-}
+      <div className="nav">
+        <button className="prev" onClick={prevbtn}>
+          <ArrowRightAltIcon className="left-arrow-btn" />
+        </button>
+        <button className="next" onClick={nextbtn} ref={nxtbtn}>
+          <ArrowRightAltIcon />
+        </button>
+      </div>
+    </div>
+  );
+};
 
-const mapStateToprops = ({covidDataReducer})=>{
-    const {fetCovidData} =covidDataReducer;
-    return {fetCovidData};
-  }
+const mapStateToprops = ({ covidDataReducer }) => {
+  const { fetCovidData } = covidDataReducer;
+  return { fetCovidData };
+};
 
-export default connect(mapStateToprops,{getCovidDataAction})(Slideshow)
+export default connect(mapStateToprops, { getCovidDataAction })(Slideshow);

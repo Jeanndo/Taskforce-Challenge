@@ -3,11 +3,15 @@ import { connect } from "react-redux";
 import SlideShow from "./Slideshow";
 import { globaldataAction } from "../../redux/actions/globalCovidData";
 
-const AppContents = ({countryData,historicalData}) => {
+/**
+ * @function AppContents
+ * @param {*} countryData a state which stores data for any country.
+ * @param {*} historicalData a state which stores historical covid-19 data.
+ * @returns a component which displays covid-19 data from the states above.
+ */
 
-  console.log(historicalData?.message);
-  console.log(historicalData?.message?.data);
-  console.log(historicalData?.message?.selectedDate);
+
+const AppContents = ({countryData,historicalData}) => {
 
   const date = historicalData?.message?.selectedDate;
 
@@ -18,7 +22,7 @@ const AppContents = ({countryData,historicalData}) => {
    const dummytests=123;
    const dummyHospitalized=123;
 
-  console.log(cases,deaths,recovered);
+
   return (
     <div className="covid-data-display-container">
       <div className="covid-data">

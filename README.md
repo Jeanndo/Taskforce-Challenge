@@ -21,16 +21,14 @@ on this part we can default deplayed data for covid-19 this is data can be found
 ###PART II
 
 ```
-Part is Backend side which handle different https requests for differents APIs.
+Part II is Backend side which handle different https requests for differents APIs.
 ```
-
-
-
-
-
-
-
-
+```
+For this to wark I used Redux to handle ansynchronous tasks in different action creators
+```
+```
+After getting data by different action creators the data are saved in different state depending on what it does.
+```
 
 
 

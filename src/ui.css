@@ -497,3 +497,15 @@ right:20px;
 .load-next{
  transform: translateY(-1920px);   
 }
+/****Form Validation********/
+.form-validationerror{
+    border:1px solid red;
+}
+.onFormValid{
+    border:1px solid #FFFFFF
+  
+}
+form{
+    background-color: #FFFFFF;
+    border-radius: 8px;
+}

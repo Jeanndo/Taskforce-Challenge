@@ -39,6 +39,7 @@ export const countryDataAction = (country) => async (dispatch) => {
     )
     .then((response) => {
       const data = response.data;
+      console.log(data)
       return dispatch({
         type: GET_COUNTRY_DATA_SUCCESS,
         payload: data,

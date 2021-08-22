@@ -3,93 +3,80 @@ import { connect } from "react-redux";
 import SlideShow from "./Slideshow";
 import { globaldataAction } from "../../redux/actions/globalCovidData";
 
-const AppContents = ({ globaldataAction, globalData, countryData }) => {
-  React.useEffect(() => {
-    const fetchGlobalData = async () => {
-      await globaldataAction();
-    };
+const AppContents = ({countryData,historicalData}) => {
 
-    fetchGlobalData();
-  }, [globaldataAction]);
+  console.log(historicalData?.message);
+  console.log(historicalData?.message?.data);
+  console.log(historicalData?.message?.selectedDate);
 
+  const date = historicalData?.message?.selectedDate;
+
+   const cases = historicalData?.message?.data?.cases[date]
+
+   const deaths = historicalData?.message?.data?.deaths[date];
+   const recovered = historicalData?.message?.data?.recovered[date];
+   const dummytests=123;
+   const dummyHospitalized=123;
+
+  console.log(cases,deaths,recovered);
   return (
     <div className="covid-data-display-container">
       <div className="covid-data">
         <div className="covid-data-card-container">
           <div className="cov-data-card">
             <div className="cov-data-box1">
-              {countryData
-                ? countryData?.message?.testsPerOneMillion
-                : globalData?.message?.testsPerOneMillion}
+              {dummytests?dummytests:countryData?.message?.testsPerOneMillion}
             </div>
             <div className="cov-data-box2">Tests</div>
             <div className="cov-data-box3">
-              {countryData
-                ? countryData?.message?.tests
-                : globalData?.message?.tests}
+            {dummytests?dummytests:countryData?.message?.tests}
             </div>
           </div>
 
           <div className="cov-data-card">
             <div className="cov-data-box1">
-              {countryData
-                ? countryData?.message?.cases
-                : globalData?.message?.cases}
+              {cases?cases:countryData?.message?.cases}
             </div>
             <div className="cov-data-box2">Positive cases</div>
             <div className="cov-data-box3">
-              {countryData
-                ? countryData?.message?.casesPerOneMillion
-                : globalData?.message?.casesPerOneMillion}
+              {cases?cases:countryData?.message?.casesPerOneMillion}
             </div>
           </div>
 
           <div className="cov-data-card">
             <div className="cov-data-box1">
-              {countryData
-                ? countryData?.message?.criticalPerOneMillion
-                : globalData?.message?.criticalPerOneMillion}
+              {dummyHospitalized?dummyHospitalized:countryData?.message?.criticalPerOneMillion}
             </div>
             <div className="cov-data-box2">Hospitalized</div>
             <div className="cov-data-box3">
-              {countryData
-                ? countryData?.message?.critical
-                : globalData?.message?.critical}
+              {dummyHospitalized?dummyHospitalized:countryData?.message?.critical}
             </div>
           </div>
 
           <div className="cov-data-card">
             <div className="cov-data-box1">
-              {countryData
-                ? countryData?.message?.recoveredPerOneMillion
-                : globalData?.message?.recoveredPerOneMillion}
+              {recovered?recovered:countryData?.message?.recoveredPerOneMillion} 
             </div>
             <div className="cov-data-box2">Recovered</div>
             <div className="cov-data-box3">
-              {countryData
-                ? countryData?.message?.recovered
-                : globalData?.message?.recovered}
+              {recovered?recovered:countryData?.message?.recovered}
             </div>
           </div>
 
           <div className="cov-data-card">
             <div className="cov-data-box1">
-              {countryData
-                ? countryData?.message?.todayDeaths
-                : globalData?.message?.todayDeaths}
+              {deaths?deaths:countryData?.message?.todayDeaths}
             </div>
             <div className="cov-data-box2">Deaths</div>
             <div className="cov-data-box3">
-              {countryData
-                ? countryData?.message?.deaths
-                : globalData?.message?.deaths}
+              {deaths?deaths:countryData?.message?.deaths}
             </div>
           </div>
 
           <div className="cov-data-card">
-            <div className="cov-data-box1">1233</div>
+            <div className="cov-data-box1">{countryData?.vaccinatedPerOneMillion?countryData?.message?.vaccinatedPerOneMillion:0}</div>
             <div className="cov-data-box2">Vaccinated</div>
-            <div className="cov-data-box3">123444</div>
+            <div className="cov-data-box3">{countryData?.vaccinated?countryData?.message?.vaccinated:0}</div>
           </div>
         </div>
       </div>
@@ -98,9 +85,10 @@ const AppContents = ({ globaldataAction, globalData, countryData }) => {
     </div>
   );
 };
-const mapStateToprops = ({ globalDataReducer, countryDataReducer }) => {
-  const { globalData } = globalDataReducer;
+const mapStateToprops = ({countryDataReducer,historicalReducer}) => {
   const { countryData } = countryDataReducer;
-  return { globalData, countryData };
+  const {historicalData}=historicalReducer;
+
+  return {countryData,historicalData};
 };
 export default connect(mapStateToprops, { globaldataAction })(AppContents);

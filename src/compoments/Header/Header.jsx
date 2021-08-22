@@ -5,14 +5,9 @@ import COVIVALICLOG from "../../Assets/covicalic.png";
 import { connect } from "react-redux";
 import { globaldataAction } from "../../redux/actions/globalCovidData";
 
-const Header = ({ globaldataAction, globalData, countryData }) => {
-  React.useEffect(() => {
-    const fetchGlobalData = async () => {
-      await globaldataAction();
-    };
-    fetchGlobalData();
-  }, [globaldataAction]);
+const Header = ({countryData }) => {
 
+  const DUMMYUPDATES = 1234456566;
   return (
     <div className="header">
       <div className="nav-bar">
@@ -52,9 +47,7 @@ const Header = ({ globaldataAction, globalData, countryData }) => {
       </Row>
       <div className="cumulatively">
         <div className="cumulativeData">
-          {countryData
-            ? countryData.message?.updated
-            : globalData?.message?.updated}
+          {DUMMYUPDATES?DUMMYUPDATES:countryData.message?.updated}
         </div>
         <div className="cumulative-heading">Cumulatively</div>
       </div>

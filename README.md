@@ -58,10 +58,9 @@ For More about how the app works you can visite the by clicking the link down be
 ```
 After Cloning The project to your machine open terminal
 ```
-### Type 
 ```
-cd task-force-challenge-frontend 
-```
+Type the cammond cd task-force-challenge-frontend 
+``` 
 ```
 Then type command down below to install to add node modules and add dependences
 ```

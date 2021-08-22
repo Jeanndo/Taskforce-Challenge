@@ -45,8 +45,12 @@ Thirdly is to search data for Rwanda country by clicking to submit button
 ```
 The Picture Below is about Test  Results
 ```
-
-
+```
+For More about how the app works you can visite the by clicking the link down below.
+```
+```
+[Hosted App](https://covicalcbytaskforce.netlify.app/)
+```
 ### LET'S SEE HOW WE CAN INSTALL THE PROJECT
 
 # Installing Node modules 

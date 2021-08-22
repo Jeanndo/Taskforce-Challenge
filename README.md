@@ -29,7 +29,18 @@ For this to wark I used Redux to handle ansynchronous tasks in different action 
 ```
 After getting data by different action creators the data are saved in different state depending on what it does.
 ```
-
+### TEST RESULTS
+```
+In this project i have made a simple test using cypress.
+```
+```
+The Test performs 3 main tasks: one for sliding continent slide show by clicking Next and Previous button.
+```
+The send one searching Rwanda country by typing Rwanda in a search bar.
+```
+```
+Thirdly is to search data for Rwanda country by clicking to submit button
+```
 
 
 # Project Set up

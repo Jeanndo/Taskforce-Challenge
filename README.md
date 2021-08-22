@@ -7,7 +7,10 @@
 ```
 This app has two parts
 ```
-
+#PART I
+```
+The frontent part: This is the part which deals with user experience.on this part we can default deplayed data for covid-19 this is data can be found on slide show section. On this part user can filter data by searching data for a specific country by its name or by both country name and date at the same time.
+```
 
 
 

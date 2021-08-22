@@ -48,17 +48,20 @@ The Picture Below is about Test  Results
 ```
 For More about how the app works you can visite the by clicking the link down below.
 ```
-```
-[Hosted App](https://covicalcbytaskforce.netlify.app/)
-```
+![Hosted App](https://covicalcbytaskforce.netlify.app/)
+
+
 ### LET'S SEE HOW WE CAN INSTALL THE PROJECT
 
-# Installing Node modules 
 
+### Installing Node modules 
+```
 After Cloning The project to your machine open terminal
-
-# Type 
+```
+### Type 
+```
 cd task-force-challenge-frontend 
+```
 
 Then type command down below to install to add node modules and add dependences
 

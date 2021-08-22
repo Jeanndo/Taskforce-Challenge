@@ -5,8 +5,14 @@ import COVIVALICLOG from "../../Assets/covicalic.png";
 import { connect } from "react-redux";
 import { globaldataAction } from "../../redux/actions/globalCovidData";
 
-const Header = ({countryData }) => {
+/**
+ * @function Header
+ * @param {*} countryData A state which stores data of a specific country.
+ * @returns Acomponent which render accumulative data about covid-19.
+ * Returns a compment which displays main header elements of app.
+ */
 
+const Header = ({ countryData }) => {
   const DUMMYUPDATES = 1234456566;
   return (
     <div className="header">
@@ -38,7 +44,7 @@ const Header = ({countryData }) => {
         <Col className="gutter-row" span={8}>
           {""}
         </Col>
-        <Col className="gutter-row" span={8}>
+        <Col className="gutter-row form-container-col" span={8}>
           <Form />
         </Col>
         <Col className="gutter-row" span={8}>
@@ -47,13 +53,16 @@ const Header = ({countryData }) => {
       </Row>
       <div className="cumulatively">
         <div className="cumulativeData">
-          {DUMMYUPDATES?DUMMYUPDATES:countryData.message?.updated}
+          {countryData ? countryData.message?.updated : DUMMYUPDATES}
         </div>
-        <div className="cumulative-heading">Cumulatively</div>
+        <div className="cumulative-heading">
+          <p>Cumulatively</p>
+        </div>
       </div>
     </div>
   );
 };
+
 const mapStateToprops = ({ globalDataReducer, countryDataReducer }) => {
   const { globalData } = globalDataReducer;
   const { countryData } = countryDataReducer;

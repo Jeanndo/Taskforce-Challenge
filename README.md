@@ -1,4 +1,4 @@
-# TASK FORCE CHALLENGE
+### TASK FORCE CHALLENGE
 ![COVICALIC](https://github.com/Jeanndo/Taskforce-Challenge/blob/main/src/Assets/COVCALIC.png)
 
 
@@ -7,7 +7,7 @@
 ```
 This app has two parts
 ```
-# PART I
+### PART I
 ```
 The frontent part: This is the part which deals with user experience.
 ```

@@ -67,11 +67,11 @@ Then type command down below to install to add node modules and add dependences
 ```
 ### npm i or yarn add 
 
-### To run project type to start the server.
+### To run project type command down below to start the server.
 ```
    Type npm start under task-force-challenge-frontend directory in your terminal
 ```
-# Runing test
+### Runing test
 ```
 Type npm test under task-force-challenge-frontend directory
 ````

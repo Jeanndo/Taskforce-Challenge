@@ -62,13 +62,16 @@ After Cloning The project to your machine open terminal
 ```
 cd task-force-challenge-frontend 
 ```
-
+```
 Then type command down below to install to add node modules and add dependences
+```
+### npm i or yarn add 
 
-# npm i or yarn add 
-
-# To run project type to start the server
-   npm start
-
+### To run project type to start the server.
+```
+   Type npm start under task-force-challenge-frontend directory in your terminal
+```
 # Runing test
+```
 Type npm test under task-force-challenge-frontend directory
+````

@@ -42,9 +42,13 @@ The send one searching Rwanda country by typing Rwanda in a search bar.
 ```
 Thirdly is to search data for Rwanda country by clicking to submit button
 ```
+```
+The Picture Below is about Test  Results
+```
 
 
-# Project Set up
+### LET'S SEE HOW WE CAN INSTALL THE PROJECT
+
 # Installing Node modules 
 
 After Cloning The project to your machine open terminal

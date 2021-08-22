@@ -345,13 +345,13 @@ opacity: 1;
     opacity: 0.56;
 }
 .profile-picture{
-    display: inline-block;
+display: inline-block;
 top: 1774px;
 left: 0.5px;
 width:50%;
 height:675px;
 border: 1px solid #707070;
-opacity: 0.33;
+opacity: 1;
 }
 .profile-name-container{
   display: inline-block;  

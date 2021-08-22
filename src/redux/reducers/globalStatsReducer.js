@@ -1,5 +1,15 @@
+/**
+ * Getting action types from :actionTypes/actionTypes file.
+ * @constant
+ * @type {string}
+ */
+
 import * as type from "../actionTypes/actionTypes";
 
+/**
+ * Creating initial state to save global covid-19 data
+ *
+ */
 const initialState = {
   globalData: {
     message: null,
@@ -8,6 +18,14 @@ const initialState = {
     success: false,
   },
 };
+
+/**
+ * A switch case based function.
+ * @function globalDataReducer
+ * @param {Object} state state of type object whicld hold global covid-19 data.
+ * @param {*} action paramter used for accessing action types and payload from action creator.
+ * @returns {Object} state that stores global covid-19 data.
+ */
 
 const globalDataReducer = (state = initialState, action) => {
   switch (action.type) {

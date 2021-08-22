@@ -1,6 +1,14 @@
+/**
+ * Getting action types from :actionTypes/actionTypes file.
+ * @constant
+ * @type {string}
+ */
 import * as type from "../actionTypes/actionTypes";
-
-const  initialState = {
+/**
+ * Creating initial state to covid-19 data for all continents.
+ *
+ */
+const initialState = {
   fetCovidData: {
     message: null,
     loading: false,
@@ -8,7 +16,13 @@ const  initialState = {
     success: false,
   },
 };
-
+/**
+ * A switch case based function.
+ * @function covidDataReducer
+ * @param {Object} state state of type object whicld hold covid-19 data for aall specific continents.
+ * @param {*} action paramter used for accessing action types and payload from action creator.
+ * @returns {Object} state that stores continents data.
+ */
 const covidDataReducer = (state = initialState, action) => {
   switch (action.type) {
     case type.GET_CONTINENT_DATA_START:

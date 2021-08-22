@@ -13,6 +13,6 @@ Then type command down below to install to add node modules and add dependences
 
 # npm i or yarn add 
 
-# To run project 
+# To run project type to start the server
    npm start
 

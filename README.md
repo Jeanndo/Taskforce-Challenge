@@ -36,6 +36,7 @@ In this project i have made a simple test using cypress.
 ```
 The Test performs 3 main tasks: one for sliding continent slide show by clicking Next and Previous button.
 ```
+```
 The send one searching Rwanda country by typing Rwanda in a search bar.
 ```
 ```

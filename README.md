@@ -16,3 +16,5 @@ Then type command down below to install to add node modules and add dependences
 # To run project type to start the server
    npm start
 
+# Runing test
+Type npm test under task-force-challenge-frontend directory

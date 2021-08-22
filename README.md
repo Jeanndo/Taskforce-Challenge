@@ -4,7 +4,7 @@
 # Project Set up
 # Installing Node modules 
 
-# After Cloning The project to your machine open terminal
+'After Cloning The project to your machine open terminal
 
 # Type cd task-force-challenge-frontend
 

@@ -6,7 +6,7 @@
 
 After Cloning The project to your machine open terminal
 
-#Type 
+# Type 
 cd task-force-challenge-frontend 
 
 Then type command down below to install to add node modules and add dependences

@@ -1,6 +1,28 @@
 # TASK FORCE CHALLENGE
 ![COVICALIC](https://github.com/Jeanndo/Taskforce-Challenge/blob/main/src/Assets/COVCALIC.png)
 
+
+
+### APP STRUCTURE
+```
+This app has two parts
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Project Set up
 # Installing Node modules 
 

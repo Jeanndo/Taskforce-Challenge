@@ -86,6 +86,7 @@ Type npm test under task-force-challenge-frontend directory
 ````
 ### Author
 [JEAN DE DIEU UKWITEGETSE](https://github.com/Jeanndo)
+
 [LinkedIn](https://www.linkedin.com/in/ukwitegetse-jean-de-dieu-346278162/)
 ### Acknowledgments
 [Awesomity Task Force](https://awesomity.rw/)

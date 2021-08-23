@@ -59,8 +59,8 @@ For More about how the app works you can visite the by clicking the link down be
 ![](https://github.com/Jeanndo/Taskforce-Challenge/blob/main/src/Assets/mobile%20visibility/mobilievisibility3.png)
 ![](https://github.com/Jeanndo/Taskforce-Challenge/blob/main/src/Assets/mobile%20visibility/tabletmode.png)
 ![](https://github.com/Jeanndo/Taskforce-Challenge/blob/main/src/Assets/mobile%20visibility/pcmode2.png)
-![]()
-![]()
+![](https://github.com/Jeanndo/Taskforce-Challenge/blob/main/src/Assets/mobile%20visibility/pcmode.png)
+
 ### LET'S SEE HOW WE CAN INSTALL THE PROJECT
 
 
@@ -84,3 +84,7 @@ Then type command down below to install to add node modules and add dependences
 ```
 Type npm test under task-force-challenge-frontend directory
 ````
+### Author
+[JEAN DE DIEU UKWITEGETSE](https://github.com/Jeanndo)
+### Acknowledgments
+[Awesomity Task Force](https://awesomity.rw/)

@@ -58,6 +58,7 @@ For More about how the app works you can visite the by clicking the link down be
 ![](https://github.com/Jeanndo/Taskforce-Challenge/blob/main/src/Assets/mobile%20visibility/mobilevisibility2.png)
 ![](https://github.com/Jeanndo/Taskforce-Challenge/blob/main/src/Assets/mobile%20visibility/mobilievisibility3.png)
 ![](https://github.com/Jeanndo/Taskforce-Challenge/blob/main/src/Assets/mobile%20visibility/tabletmode.png)
+![](https://github.com/Jeanndo/Taskforce-Challenge/blob/main/src/Assets/mobile%20visibility/pcmode2.png)
 ![]()
 ![]()
 ### LET'S SEE HOW WE CAN INSTALL THE PROJECT
